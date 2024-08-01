@@ -1,9 +1,9 @@
 <script>
 	import { slide } from './slide.js'
-   import { importDeck } from '$lib/stores/player.js'
+   import { importDeck, cards } from '$lib/stores/player.js'
    import Spinner from './Spinner.svelte'
 
-   let isOpen = true
+   let isOpen = !cards.get().length;
 
    let txt = ''
    let response = ''
